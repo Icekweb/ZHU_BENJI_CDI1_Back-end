@@ -1,0 +1,282 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+    height: 100%;
+}
+
+.Mainheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0); 
+    padding: 10px 40px; 
+    color: rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* espace au milieu */
+    align-items: center; 
+}
+
+.title-center {
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+}
+.Mainheader > img {
+    object-fit: fill;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+#Logo-lol:hover {
+scale: 1.5;
+
+}
+
+.Mainheader > h2 {
+  margin-top: 5px;
+
+}
+
+
+main {
+    position: relative; 
+    width: 100%;
+    min-height: 100vh; /* fait la taille de la ecran*/
+    padding-top: 50px; /* espace de 50px */
+}
+
+#Lol-BG {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill sans changer image */
+}
+
+.presentation-contenu {
+    display: flex;
+    gap: 120px;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content: end;
+    height: 200px;
+    
+   
+}
+
+.presentation-contenu :hover {
+    box-shadow: 12px 12px 12px rgb(0, 0, 0, 0.1),
+    -10px -10px 10px white;
+}
+
+.bloc-3 {
+    width: 20%;
+    height: 100px;
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    align-content:center;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out forwards;
+    
+}
+
+.bloc-1:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.bloc-2:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bloc-3:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+
+
+.presentation-contenu-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.presentation-contenu-2 :hover {
+    box-shadow: 12px 12px 12px rgb(0, 0, 0, 0.1),
+    -10px -10px 10px white;
+
+}
+
+.iframe-container p {
+    display: none;
+}
+
+.iframe-container img {
+    display: none;
+}
+
+
+#univers-toggle:checked ~ #RunterraMap {
+    display: block;
+}
+
+#histoire-toggle:checked ~ p {
+    display: block;
+}
+
+.iframe-container p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+    
+}
+.toggle-btn {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    align-content:center;
+    text-align: center;
+    width: 397px;
+    height: 100px;
+}
+
+#RunterraMap {
+    width: 100%;
+    height: auto;
+
+}
+.iframe {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.bloc-4 {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    animation: fadeInUp 0.6s ease-out forwards;
+} 
+
+.bloc-5 {
+    width: 80%;
+    height: auto;
+    z-index: 2;
+    animation: fadeInUp 0.6s ease-out forwards;
+
+}
+
+.BackGround {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* reste en dessous des autres */
+}
+
+
+
+.swiper {
+  width: 90%; 
+  height: 300px;
+  margin: 120px auto 50px auto;
+  z-index: 2;
+}
+
+/* faire tout sois au milieu */
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 12px; /* border ronds*/
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* box shadow */
+}
+
+.first-page-hero { 
+    width: 100%; 
+    height: 100vh; 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+    z-index: 5; 
+    margin-top: 0; 
+}
+
+.reveal-text {
+    font-size: 4rem; /* taille des mots */
+    color: #ffffff; 
+    font-weight: bold; /* mot souligner */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); /* cacher le mot au debut */
+    animation: wipeReveal 3s ease-in-out forwards; /* utliser wipe Reveal 3s */
+    animation-delay: 0.5s; /* delais 035s */
+} 
+
+@keyframes wipeReveal { 
+    from { 
+        /* on cache est visible commencer de droit */
+        clip-path: inset(0 100% 0 0); 
+    }
+    to { 
+        /* il n'est plus cacher*/
+        clip-path: inset(0); 
+    } 
+}
+
+
+.second-page-gallery {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+}
+
+
+.BackGround {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+#Lol-BG {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.swiper {
+    width: 80%; 
+    height: 60vh; 
+    z-index: 10;
+}
