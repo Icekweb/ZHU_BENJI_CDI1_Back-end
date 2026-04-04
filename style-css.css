@@ -280,3 +280,55 @@ main {
     height: 60vh; 
     z-index: 10;
 }
+
+#city {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    width: 300px;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-right: 15px; 
+}
+
+#getweather {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #c89b3c;
+    color: #111;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+#weather {
+    margin-top: 30px;
+    padding: 20px 30px;
+    font-size: 1.5rem; 
+    line-height: 1.8;
+    color: #fff;
+    background-color: rgba(17, 17, 17, 0.85); 
+    border: 2px solid #c89b3c; 
+    border-radius: 10px;
+    max-width: 450px;
+    box-shadow: 0 0 20px rgba(200, 155, 60, 0.15); 
+}
+
+
+#weather:empty {
+    display: none;
+}
+
+
+#weather p {
+    margin: 10px 0;
+    border-bottom: 1px solid #333; 
+    padding-bottom: 5px;
+}
+
