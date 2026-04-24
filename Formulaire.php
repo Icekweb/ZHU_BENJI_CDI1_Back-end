@@ -1,6 +1,24 @@
 <?php 
 include 'db.php'; 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_skin'])) {
+    $nom = trim($_POST['nom']);
+    $prix = trim($_POST['prix']);
+
+if (!empty($nom) && !empty($prix)) {
+        try {
+        
+            $stmt = $pdo->prepare("INSERT INTO produits (nom, prix) VALUES (:nom, :prix)");
+            $stmt->execute([
+                'nom' => $nom,
+                'prix' => $prix
+            ]);
+            $message = "<p style='color:green;'>Skin ajouté avec succès !</p>";
+        } catch (PDOException $e) {
+            $message = "<p style='color:red;'>Erreur : " . $e->getMessage() . "</p>";
+        }
+    } else {
+        $message = "<p style='color:red;'>Veuillez remplir tous les champs.</p>";
+    }
 }
 ?>
 <!DOCTYPE html>
