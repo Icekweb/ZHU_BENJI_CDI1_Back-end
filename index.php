@@ -1,5 +1,6 @@
 <?php
 include 'db.php';
+$tri = isset($_GET['tri']) ? $_GET['tri'] : 'nom';
 $stmt = $pdo->query("SELECT * FROM produits ORDER BY $tri ASC");
 $skins = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
